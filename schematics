@@ -1,0 +1,70 @@
+Schematic documentation for Flash Cards v1.0
+
+FILES:
+flashcards: Main system
+
+DATABASES:
+flashcards.dat: Database of all flashcard info
+options.dat: Lists all of the option preferences
+categories.dat: Lists all of the categories, question types, etc
+
+FUNCTION LIBRARIES:
+flashcards: main file, initializes everything and executes menu_func
+menu_func: defines functions for each of the menus
+ques_func: defines functions for diffent types of questions (Short, MC, Long, etc)
+stan_func: defines basic, common functions
+
+OTHER DATA:
+schematics: these notes
+readme: may want one.
+	
+Main menu:
+1) New
+2) Test
+3) View database
+4) Options
+5) About/Help
+6) Exit
+
+##########################################################
+1) New:
+- Ask for category (Vim, Awk, Powertools, Sysadmin, Regex etc)
+	* Pull from categories.dat
+- Question type (Short Answer, Multiple Choice, Long Answer)
+	* Pull from categories.dat
+- Question
+	* references ques_func
+- Next or quit
+	* references stan_func
+
+2) Test:
+- Generates a flashcard question within option parameters
+	* references stan_func, which executes a pull from flashcards.dat
+- Asks the question
+	* references ques_func
+- Options (Save/Next, Discard/Next, etc)
+	* references stan_func
+- Next or quit
+	* references stan_func
+	
+3) View Database:
+- Present options CRUD
+	* references menu_func
+- Next or quit
+	* references stan_func
+
+4) Options:
+- Present options
+	* references menu_func
+- Next or quit
+	* references stan_func
+
+5) About/Help:
+- Present static data, paginated
+	* references menu_func
+- Next or quit
+	* references stan_func
+
+6) Exit:
+- Quit
+	* references stan_func
