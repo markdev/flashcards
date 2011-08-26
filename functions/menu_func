@@ -1,0 +1,66 @@
+main_menu()
+{
+	clear
+	echo
+	echo "   #############################################################################" 
+	echo "   #############################################################################"	
+	echo "   #####                                                                   #####"
+	echo "   #####                                                                   #####"
+	echo "   #####                          FLASH CARDS                              #####"
+	echo "   #####                          version 1.0                              #####"
+	echo "   #####                                                                   #####"
+	echo "   #####                          By: M.A.R.K.                             #####"
+	echo "   #####                                                                   #####"
+	echo "   #############################################################################"
+	echo "   #############################################################################"
+	echo
+	echo "          MAIN MENU" 
+	echo "          1) Test" 
+	echo "          2) Create new Flash Cards"
+	echo "          3) Database"
+	echo "          4) Options"
+	echo "          5) About Flash Cards"
+	echo "          6) Exit"
+	echo
+}
+
+
+
+new_menu()
+{
+	clear
+	echo "hello from inside the new menu"
+}
+
+
+
+test_menu()
+{
+	clear
+	echo "hello from inside the test menu"
+}
+
+
+
+data_menu()
+{
+	clear
+	echo "hello from inside the data menu"
+}
+
+
+
+option_menu()
+{
+	clear
+	echo "hello from inside the option menu"
+}
+
+
+
+about_menu()
+{
+	clear
+	echo "hello from inside the about menu"
+}
+

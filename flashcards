@@ -1,0 +1,61 @@
+# Program runs in bash
+#!/usr/bin/env bash
+
+##################
+##	Initialize root paths
+root="/Users/marcuskaravan/markcomp/flashcards"
+export root
+
+
+##################
+##	Initialize function libraries here
+. $root/functions/stan_func
+. $root/functions/menu_func
+. $root/functions/ques_func
+
+
+##################
+##	Initialize databases here
+db_card="$root/data/flashcards.dat"
+export db_card
+#
+db_option="$root/data/options.dat"
+export db_option
+#
+db_category="$root/data/categories.dat"
+export db_category
+
+
+##################
+##	Start at the main menu	
+main_menu
+echo -n "	Enter your choice: "
+read menuchoice
+
+
+##################
+##	Process $menuchoice
+case $menuchoice in
+	1)
+		test_menu
+		;;
+	2)
+		new_menu
+		;;
+	3)
+		data_menu
+		;;
+	4)
+		option_menu
+		;;
+	5)
+		about_menu
+		;;
+	6)
+		echo "This is not ready yet"
+		;;
+	*)
+		say "I'm sorry Dave, I'm afraid I can't do that"
+		;;
+esac	
+
