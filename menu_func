@@ -106,7 +106,20 @@ data_menu()
 option_menu()
 {
 	clear
-	echo "hello from inside the option menu"
+	echo 
+	echo "           ####################################"
+	echo "           ##"
+	echo "           ##            OPTIONS"
+	echo "           ##"
+	echo 
+	############################################
+	# Flash card selection options
+	# 	Grace period, minimum passing percentage, minimum passing total,
+	#	Recurrence period, master min passing percent, master min pass total,
+	#	Recurrence iterations
+	# Categories
+	# Voice
+	# Hints 
 	next_quit
 }
 
