@@ -26,19 +26,71 @@ main_menu()
 
 
 
-new_menu()
-{
-	clear
-	echo "hello from inside the new menu"
-}
-
-
-
 test_menu()
 {
 	clear
 	echo "hello from inside the test menu"
+	next_quit
 }
+
+
+
+new_menu()
+{
+	clear
+	echo 
+	echo "           ####################################"
+	echo "           ##"
+	echo "           ##       CREATE NEW ENTRIES"
+	echo "           ##"
+	echo 
+	
+#######################
+## The categories will be pulled from categories.dat 
+	echo -n "Select category: "
+	read category
+
+#######################
+## The question types will be pulled from categories.dat
+	echo -n "Question Type: " 
+	read type
+
+#######################
+## The question will be pulled from ques_func
+	echo -n "Question: "
+	read question
+	echo -n "Answer: "
+	read answer
+
+#######################
+## The hint will be pulled conditionally from ques_func
+	echo -n "Enter a hint (optional): "
+	read hint
+	
+#######################
+## Response
+	echo
+	echo "You have entered the following:"
+	echo "Category: $category"
+	echo "Question Type: $type"
+	echo "Q: $question"
+	echo "A: $answer"
+	echo "Hint: $hint"
+	echo
+	echo -n "Would you like to save this entry? (y/n) "
+	read save
+
+	if [ $save = y ];
+	then
+		echo "$category::$type::$question::$answer::$hint" >> $db_card
+		echo "Flash card saved"
+	else
+		echo "Flash card not saved"
+	fi	
+	echo
+	next_quit
+}
+
 
 
 
@@ -46,6 +98,7 @@ data_menu()
 {
 	clear
 	echo "hello from inside the data menu"
+	next_quit
 }
 
 
@@ -54,6 +107,7 @@ option_menu()
 {
 	clear
 	echo "hello from inside the option menu"
+	next_quit
 }
 
 
@@ -62,5 +116,6 @@ about_menu()
 {
 	clear
 	echo "hello from inside the about menu"
+	next_quit
 }
 

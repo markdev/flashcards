@@ -1,0 +1,14 @@
+next_quit()
+{
+	echo -n "Would you like to (c)ontinue or (q)uit? "
+	read choice
+	
+	case $choice in
+		c)
+		new_menu
+		;;
+		q)
+		. $root/flashcards
+		;;
+	esac
+}

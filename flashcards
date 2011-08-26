@@ -51,11 +51,13 @@ case $menuchoice in
 	5)
 		about_menu
 		;;
-	6)
-		echo "This is not ready yet"
+	6|q|Q|x|X)
+		clear
+		exit
 		;;
 	*)
 		say "I'm sorry Dave, I'm afraid I can't do that"
+		. $root/flashcards
 		;;
 esac	
 
