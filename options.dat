@@ -13,27 +13,27 @@ grace=5
 ##  Minimum passing percentage
 ## -	this defines the success percentage needed to pull a card out of circulation  	
 ## -	it is expressed as a two-digit number
-min_pass_perc=80
+min_per=80
 
 ##############################
 ##  Minimum passing total
 ## - 	this defines the total number of attempts needed to pull a card out of circulation
 ## -	it is expressed as a number
-min_pass_tot=30
+min_tot=30
 
 ##############################
 ##  Master minimum passing percentage
 ## -	this defines the success percentage needed to pull a card out of circulation  	
 ##		after having been pulled out of circulation
 ## -	it is expressed as a two-digit number
-mast_min_pass_perc=80
+mas_per=80
 
 ##############################
 ##  Master minimum passing total
 ## - 	this defines the total number of attempts needed to pull a card out of circulation
 ##		after having been pulled out of circulation
 ## -	this is expressed as a number
-mast_min_pass_tot=5
+mas_tot=5
 
 ##############################
 ##  Recurrence period
@@ -47,3 +47,18 @@ recur_per=1000
 ##
 recur_it=3
 
+##############################
+##  Hints
+## -	this determines whether and how hints are allowed: n-none, v-visible, a-audible, b-both
+##
+hint=b
+
+##############################
+##  Categories
+## - 	this is a set of categories that you can choose from, with "::" as the delimiter
+##
+:: Basic Unix	b
+:: Power tools	p
+:: Sed and Awk	s
+:: VI	v
+:: System Administration	a

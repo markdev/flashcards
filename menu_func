@@ -28,6 +28,7 @@ main_menu()
 
 test_menu()
 {
+#### Remember to initialize option variables here first
 	clear
 	echo "hello from inside the test menu"
 	next_quit
@@ -105,6 +106,7 @@ data_menu()
 
 option_menu()
 {
+	
 	clear
 	echo 
 	echo "           ####################################"
@@ -112,6 +114,29 @@ option_menu()
 	echo "           ##            OPTIONS"
 	echo "           ##"
 	echo 
+
+	echo "(a) Grace period: `grep -Poh '(?<=grace=)[0-9]*' $db_option`"
+	echo "(b) Minimum passing percentage: `grep -Poh '(?<=min_per=)[0-9]*' $db_option`%"
+	echo "(c) Minimum passing total: `grep -Poh '(?<=min_tot=)[0-9]*' $db_option`"
+	echo "(d) Minimum passing percentage (mastered): `grep -Poh '(?<=mas_per=)[0-9]*' $db_option`%"
+	echo "(e) Minimum passing total (mastered): `grep -Poh '(?<=mas_tot=)[0-9]*' $db_option`"
+	echo "(f) Recurrence period: `grep -Poh '(?<=recur_per=)[0-9]*' $db_option`"
+	echo "(g) Recurrence iterations: `grep -Poh '(?<=recur_it=)[0-9]*' $db_option`"
+	echo "(h) Hints: `grep -Poh '(?<=hint=)[navb]' $db_option`"
+	echo "(i) Categories: `grep '^::' $db_option | awk '{printf "%s", $2 ", " }'`"
+
+	echo
+	echo -n "Enter your choice: "
+	read option
+
+	echo "You have entered $option"
+
+	#echo -n "Change grace period: "
+	#read  grace_var
+	#sed 's/'(?<=grace=)[0-9]*'/6/' $db_option
+	#echo -n "Grace has been changed to "
+	#grep -Poh '(?<=grace=)[0-9]*' $db_option
+	
 	############################################
 	# Flash card selection options
 	# 	Grace period, minimum passing percentage, minimum passing total,

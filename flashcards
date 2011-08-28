@@ -24,6 +24,17 @@ export db_option
 
 
 ##################
+##	Initialize option values
+grace=foo
+min_pass_perc=foo
+min_pass_tot=foo
+mast_min_pass_perc=foo
+mast_min_pass_tot=foo
+recur_per=foo
+recur_it=foo
+
+
+##################
 ##	Start at the main menu	
 main_menu
 echo -n "	Enter your choice: "
@@ -50,6 +61,7 @@ case $menuchoice in
 		;;
 	6|q|Q|x|X)
 		clear
+		ls -lahG
 		exit
 		;;
 	*)
